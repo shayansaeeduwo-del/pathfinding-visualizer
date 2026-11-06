@@ -1,0 +1,59 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 16px;
+  user-select: none; /* stop text highlight while dragging walls */
+}
+
+.app h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.clear-btn {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+
+.clear-btn:hover {
+  background: #e8e8e8;
+}
+
+/* 40 columns × 24px cells */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(40, 24px);
+  width: fit-content;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.cell {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.cell.start {
+  background: #2ecc71; /* green */
+}
+
+.cell.end {
+  background: #e74c3c; /* red */
+}
+
+.cell.wall {
+  background: #555; /* dark gray */
+}
