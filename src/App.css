@@ -14,7 +14,12 @@
   color: #1a1a1a;
 }
 
-.clear-btn {
+.controls {
+  display: flex;
+  gap: 12px;
+}
+
+.control-btn {
   padding: 8px 16px;
   font-size: 0.95rem;
   cursor: pointer;
@@ -24,8 +29,13 @@
   color: #1a1a1a;
 }
 
-.clear-btn:hover {
+.control-btn:hover:not(:disabled) {
   background: #e8e8e8;
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 /* 40 columns × 24px cells */
@@ -56,4 +66,12 @@
 
 .cell.wall {
   background: #555; /* dark gray */
+}
+
+.cell.visited {
+  background: #add8e6; /* light blue */
+}
+
+.cell.path {
+  background: #f1c40f; /* yellow */
 }
